@@ -39,7 +39,6 @@ app.use("/donor", require("./routes/donor"));
 app.use("/receiver", require("./routes/receiver"));
 app.use("/listing", require("./routes/listings"));
 
-// Proxy for the compost AI service (avoids browser CORS restrictions)
 app.post("/api/compost", async (req, res) => {
     try {
         const { waste_item } = req.body;
